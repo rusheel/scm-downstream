@@ -9,17 +9,15 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Quoting</title>
+  <title>SCM-D - Reports</title>
 
-  <!-- Custom fonts for this template -->
+  <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
+  <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this page -->
-  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="css/reports.css" rel="stylesheet">
 
 </head>
 
@@ -76,30 +74,18 @@
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column" style="height:100%">
 
       <!-- Main Content -->
-      <div id="content">
+      <div id="content" style="height:100%">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="height:12%">
 
           <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button>
+          <h1 class="h3 mb-0 text-gray-800">Reports</h1>
 
-          <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
+
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto" style="margin-left:0px">
@@ -208,149 +194,127 @@
           </ul>
 
         </nav>
-        <!-- End of Topbar -->
+
+                <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Quoting</h1>
-          <!-- <p class="mb-4">Generate quotes for your shipments, keep track of past shipments, and book a shipment</a>.</p> -->
+          <!-- Content Row -->
+          <div class="row" style="height:50%">
 
-          <div class="row">
-            <!-- Recent Quotes -->
-            <div style="margin-left: 10px; margin-right:10px; "></div>
-            <a href="quoting-history.html" class="btn btn-primary btn-icon-split">
-              <span class="icon text-white-50">
-                <i class="fas fa-calendar"></i>
-              </span>
-              <span class="text">Recent Quotes</span>
-            </a>
-    
-            <div style="margin-left: 10px; margin-right:10px; "></div>
-            <!-- Quoting Card -->
-            <a href="quoting-make.html" class="btn btn-primary btn-icon-split">
-              <span class="icon text-white-50">
-                <i class="fas fa-clipboard"></i>
-              </span>
-              <span class="text">Make a Quote</span>
-            </a>
+            <div class="col-8">
 
-          </div>
-
-          <!-- DataTales Example -->
-          <div class="card shadow mb-4" style="margin-top: 20px">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Make A Quote</h6>
-            </div>
-            <div class="card o-hidden border-0 shadow-lg">
-                <div class="card-body p-0">
-                  <!-- Nested Row within Card Body -->
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="p-5">
-                        <h6 class="m-0 font-weight-bold text-primary">Pickup and Delivery</h6>
-                        <br>
-                        <form class="user">
-                          <div class="form-group">
-                            <label>Ship From:</label>
-                            <select name="options">
-                              <option value="">
-                                Select a location
-                              </option>
-                              <option value="1">
-                                123 Sesame Street
-                              </option>
-                              <option value="2">
-                                51 Motorcycle Lane
-                              </option>
-                              <option value="3">
-                                1 Infinite Street
-                              </option>
-                              <option value="4">
-                                56 Vroom Vroom Avenue
-                              </option>
-                            </select>
-                          </div>
-                          <div class="form-group">
-                            <label>Pick up on:</label> 
-                            <input type="date" name="dateofbirth" id="dateofbirth">
-                          </div>
-                          <hr/>
-                          <div class="form-group">
-                            <label>Ship To:</label>
-                            <select name="options">
-                                <option value="">
-                                  Select a location
-                                </option>
-                                <option value="1">
-                                  123 Sesame Street
-                                </option>
-                                <option value="2">
-                                  51 Motorcycle Lane
-                                </option>
-                                <option value="3">
-                                  1 Infinite Street
-                                </option>
-                                <option value="4">
-                                  56 Vroom Vroom Avenue
-                                </option>
-                              </select>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-
-                     <div class="col-lg-6">
-                      <div class="p-5">
-                        <h6 class="m-0 font-weight-bold text-primary">Shipping Details</h6>
-                        <br>
-                        <form class="user">
-                          <div class="form-group">
-                            <label>Packaging:</label>
-                            <select name="options">
-                              <option value="">
-                                Select a package type
-                              </option>
-                              <option value="1">
-                                Pallets (48'' x 40'')
-                              </option>
-                              <option value="2">
-                                100 ft Bubble Wrap
-                              </option>
-                              <option value="3">
-                                Cardboard Box (50'' x 50'')
-                              </option>
-                              <option value="4">
-                                Cardboard Box (20'' x 20'')
-                              </option>
-                            </select>
-                          </div>
-                          <label>Item:</label>
-                          <input type="text" placeholder="Enter item name" />
-                          <br>
-                          <br>
-                          <label>Quantity:</label>
-                          <input type="text" placeholder="Enter quantity" />
-                          <br>
-                          <br>
-                          <label>Total Weight (kg):</label>
-                          <input type="text" placeholder="Enter weight" />
-                          <br>
-                          <br>
-                          <label>Description:</label>
-                          <input type="text" placeholder="Enter description" />
-
-                          <hr/>
-                        </form>
-                        <a href="quoting-results.html" class="btn btn-primary btn-icon-split">
-                          <span class="text">Quote</span>
-                        </a>
-                      </div>
-                    </div>
+              <!-- Area Chart -->
+              <div class="card shadow mb-4" style="height:94%">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Shipments</h6>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <thead>
+                      <tr>
+                        <th>Shipment ID</th>
+                        <th>Name</th>
+                        <th>Origin</th>
+                        <th>Destination</th>
+                        <th>Date</th>
+                        <th>Download</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>589</td>
+                        <td>Engines</td>
+                        <td>Florida</td>
+                        <td>Minnesota</td>
+                        <td>2011/04/25</td>
+                        <td style="text-align:center">  <a href="img/hard-work.jpg" download>  <p style="margin:0px"><i class="fas fa-arrow-down fa-lg"></i></p>  </a> </td>
+                      </tr>
+                      <tr>
+                        <td>599</td>
+                        <td>Kick Stands</td>
+                        <td>Tokyo</td>
+                        <td>Germany</td>
+                        <td>2011/07/25</td>
+                        <td style="text-align:center">  <a href="img/hard-work.jpg" download>  <p style="margin:0px"><i class="fas fa-arrow-down fa-lg"></i></p>  </a> </td>
+                      </tr>
+                      <tr>
+                        <td>629</td>
+                        <td>Exhaust Pipes</td>
+                        <td>San Francisco</td>
+                        <td>France</td>
+                        <td>2009/01/12</td>
+                        <td style="text-align:center">  <a href="img/hard-work.jpg" download>  <p style="margin:0px"><i class="fas fa-arrow-down fa-lg"></i></p>  </a> </td>
+                      </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
+
+            </div>
+
+            <!-- Donut Chart -->
+            <div class="col-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Inventory Management</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4">
+                    <canvas id="inventoryManagement"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="height:50%">
+
+            <!-- Bar Chart -->
+            <div class="col-4">
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Shipment Timing</h6>
+              </div>
+              <div class="card-body">
+                <div class="chart-bar">
+                  <canvas id="shipmentTiming"></canvas>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="col-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Back Order</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart-bar">
+                    <canvas id="lowInventory"></canvas>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Shipment Costs</h6>
+              </div>
+              <div class="card-body">
+                <div class="chart-bar">
+                  <canvas id="shipmentCosts"></canvas>
+                </div>
+
+              </div>
+            </div>
           </div>
 
         </div>
@@ -363,7 +327,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; SCM Downstream</span>
+            <span>Copyright &copy; Your Website 2019</span>
           </div>
         </div>
       </footer>
@@ -410,11 +374,14 @@
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/demo/chart-area-inventory-management.js"></script>
+  <script src="js/demo/chart-pie-shipment-costs.js"></script>
+  <script src="js/demo/chart-pie-shipment-timing.js"></script>
+  <script src="js/demo/chart-bar-low-inventory.js"></script>
+
 
 </body>
 
